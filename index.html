@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Online Test</title>
+    <script src="https://kit.fontawesome.com/1d381cab2c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQggFGBmIkLZAaOocIQ4Vm7mWEJvr6vrapaoA&usqp=CAU" />
+</head>
+<body>
+    <nav class="mb-5">
+        <img src="./pucit.png">
+        <h1>PUNJAB UNIVERSITY ONLINE QUIZ</h1>
+        <div class="themes">
+            <button class="cam_btn btn btn-primary">Camera</button>
+            <button class="btn-dark btn dark-theme">Dark Theme</button>
+            <button class="btn-light btn light-theme">Light Theme</button>
+        </div>
+    </nav>
+    
+    <div class="container">
+    <div class="row">
+        <div class="btn_div p-4 mt-4 col-lg-5">
+            <h1>Important Note</h1>
+            <ol>
+                <li>Student will have only 1 min per question.</li>
+                <li>Student cannot use calculator <i class="fas fa-calculator"></i></li>
+                <li>Student will Keep Mic <i class="fas fa-microphone"></i> on</li>
+                <li>Student will keep Camera <i class="fas fa-camera"></i> On</li>
+            </ol>
+
+            <button class="btn btn-success">Attempt Quiz</button>
+        </div>
+        <div class="col-lg-7">
+            <h4 class="text-center">Your Video</h4>
+            <video autoplay="true" id="video" width="650" height="490"></video>
+
+
+        </div>
+    </div>
+    </div>
+
+    <div class="info_box p-4">
+        <h5>        You Timmer will start.<br/>
+            And You cannot Reattempt it.
+        </h5>
+        <div class="buttons">
+            <button class="quit btn btn-danger">Go Back</button>
+            <button class="restart btn btn-success">Continue</button>
+        </div>
+    </div>
+
+    <div class="quiz_box">
+        <!-- here ques and options -->
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+
+        <hr>
+        <footer>
+            <div class="total_que">
+            </div>
+            <button class="next_btn btn btn-dark">
+                Next&nbsp;	&nbsp;	 <i class="fas fa-arrow-right"></i>
+            </button>
+        </footer>
+    </div>
+
+    <div class="result_box">
+        <div class="icon">
+            <i class="far fa-check-circle"></i>
+        </div>
+        <div class="complete_text">Quiz Completed    <i class="far fa-smile-wink"></i></div>
+        <div class="score_text">
+
+        </div>
+        <div class="buttons">
+            <button class="btn btn-dark restart">Replay Quiz</button>
+            <button class="btn btn-dark quit">Quit Quiz</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
