@@ -1,3 +1,4 @@
+//define all variables
 const dark_btn = document.getElementsByClassName("dark-theme")[0];
 const light_btn = document.getElementsByClassName("light-theme")[0];
 const cam_btn = document.getElementsByClassName("cam_btn")[0];
@@ -13,6 +14,22 @@ const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const webCam_selector = document.getElementById("webcam");
 
+//check tab visibility
+document.addEventListener('visibilitychange', function(){
+    if(document.visibilityState === "visible"){
+        document.title = "Active Tab";
+        console.log("visibility state = " , document.visibilityState);
+        
+    }
+    else{
+        console.log("visibility state = " , document.visibilityState);
+        document.title = "Inactive Tab";
+        alert("Warning = donot change tab")
+    }
+});
+
+
+///camera to stop cheating
 async function getWebCam()
 {
     try{
@@ -28,6 +45,9 @@ cam_btn.onclick=()=>{
     getWebCam();
 }
 
+
+
+//dark mode 
 dark_btn.onclick = () =>{
     document.getElementsByTagName("nav")[0].classList.add("nav_darks");
     document.getElementsByTagName("body")[0].classList.add("body_darks");
