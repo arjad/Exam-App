@@ -4,7 +4,17 @@
     margin: 0;
     padding: 0;
 }
+#full-screen-btn{
+margin: 20px;
+padding: 10px;
+border: none;
+background-color: #240310;
+color: #ffffff;
+cursor: pointer;
+border-radius: 5px;
+}
 .nav_darks{
+
     background-color: rgb(66, 64, 6);
     color: white;
 }

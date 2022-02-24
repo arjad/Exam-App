@@ -29,6 +29,29 @@ document.addEventListener('visibilitychange', function(){
 });
 
 
+///full screen
+let btn = document.getElementById("full-screen-btn");
+let myDocument = document.documentElement;
+
+btn.addEventListener("click", ()=>{
+        if (myDocument.requestFullscreen) {
+            myDocument.requestFullscreen();
+        } 
+        else if (myDocument.msRequestFullscreen) {
+            myDocument.msRequestFullscreen();
+        } 
+        else if (myDocument.mozRequestFullScreen) {
+            myDocument.mozRequestFullScreen();
+        }
+        else if(myDocument.webkitRequestFullscreen) {
+            myDocument.webkitRequestFullscreen();
+        }
+        btn.textContent = "Exit Fullscreen";
+});
+
+
+
+
 ///camera to stop cheating
 async function getWebCam()
 {
